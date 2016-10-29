@@ -1,0 +1,7 @@
+*
+
+!.gitignore
+!init.el
+!lisp/
+!lisp/init-*.el
+!right-click-menu.reg
