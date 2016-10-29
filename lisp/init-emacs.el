@@ -1,9 +1,13 @@
 
+(desktop-save-mode 1)
+
 (setq visible-bell 1)
 
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
+
+(global-unset-key (kbd "C-<down-mouse-1>"))
 
 (defconst backup-directory
   (format "%s/%s/" temporary-file-directory "emacs-backup"))
@@ -18,6 +22,9 @@
 
 ;(load-theme 'deeper-blue)
 (use-package spacemacs-theme
+  :demand
+  :init
+  (setq spacemacs-theme-comment-bg nil)
   :config
   (load-theme 'spacemacs-dark))
 
