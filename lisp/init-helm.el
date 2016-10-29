@@ -15,5 +15,13 @@
 	 ("M-m p" . helm-list-elisp-packages)
 	 ("M-m b" . helm-filtered-bookmarks)))
 
+(use-package helm-projectile
+  :config
+  (projectile-global-mode)
+  (setq projectile-completion-system 'helm)
+  (setq projectile-indexing-method 'alien)
+  (setq projectile-switch-project-action 'helm-projectile)
+  ;(setq projectile-enable-caching t)
+  (helm-projectile-on))
 
 (provide 'init-helm)
