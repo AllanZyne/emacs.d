@@ -2,8 +2,7 @@
 
 (setq gc-cons-threshold 100000000)
 
-;(load-file (concat user-emacs-directory "core/core-load-paths.el"))
-(add-to-list 'load-path "~/.emacs.d/lisp/")
+(load-file (concat user-emacs-directory "lisp/init-paths.el"))
 
 (require 'init-package)
 

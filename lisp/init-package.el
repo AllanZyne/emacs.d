@@ -6,7 +6,7 @@
 
 (package-initialize)
 
-
+(package-install 'use-package)
 (setq use-package-always-ensure t)
 
 
