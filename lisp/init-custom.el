@@ -8,11 +8,13 @@
  '(custom-safe-themes
    (quote
     ("bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" default)))
+ '(desktop-buffers-not-to-save ".*")
+ '(desktop-load-locked-desktop t)
  '(global-company-mode t)
  '(helm-mode t)
  '(package-selected-packages
    (quote
-    (js2-mode company helm-projectile helm-pt helm drag-stuff spacemacs-theme chinese-fonts-setup use-package)))
+    (use-package spacemacs-theme smartparens paradox markdown-mode js2-mode helm-pt helm-projectile drag-stuff company chinese-fonts-setup)))
  '(projectile-other-file-alist
    (quote
     (("cpp" "h" "hpp" "ipp")
