@@ -23,6 +23,15 @@
 (setq spacemacs-theme-comment-bg nil)
 (load-theme 'spacemacs-dark t)
 
+;; others
+(use-package form-feed
+  :commands form-feed-mode
+  :init
+  (add-hook 'help-mode-hook 'form-feed-mode)
+  (add-hook 'emacs-lisp-mode-hook 'form-feed-mode)
+  :config
+  (form-feed-mode 1))
+
 ;; custom
 (load custom-file)
 

@@ -34,6 +34,7 @@
      (nil "lock" "gpg")
      ("lock" "")
      ("gpg" ""))))
+ '(sp-show-pair-from-inside t)
  '(spacemacs-theme-comment-bg nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

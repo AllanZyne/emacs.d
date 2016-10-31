@@ -22,7 +22,13 @@
 (use-package smartparens
   :config
   (require 'smartparens-config)
-  (smartparens-global-mode 1))
+  (smartparens-global-mode 1)
+  (show-smartparens-global-mode 1))
+
+(use-package rainbow-delimiters
+  :defer t
+  :commands rainbow-delimiters-mode
+  :init (add-hook 'prog-mode-hook 'rainbow-delimiters-mode))
 
 (setq-default indent-tabs-mode nil)
 

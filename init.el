@@ -14,8 +14,9 @@
 (require 'init-company)
 
 (require 'init-javascript)
-(require 'init-python)
-(require 'init-cpp)
-(require 'init-markdown)
+(require 'init-web)
+;; (require 'init-python)
+;; (require 'init-cpp)
+;; (require 'init-markdown)
 
 (require 'server)
