@@ -25,12 +25,13 @@
   (smartparens-global-mode 1)
   (show-smartparens-global-mode 1))
 
+
 (use-package rainbow-delimiters
-  :defer t
-  :commands rainbow-delimiters-mode
-  :init (add-hook 'prog-mode-hook 'rainbow-delimiters-mode))
+  :config
+  (global-rainbow-delimiters 1))
 
 (setq-default indent-tabs-mode nil)
+(setq-default tab-width 4)
 
 (use-package multiple-cursors
   :bind (("C-L" . mc/edit-lines)

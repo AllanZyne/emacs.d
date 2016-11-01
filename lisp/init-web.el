@@ -7,13 +7,10 @@
   (setq web-mode-code-indent-offset 4)
   (setq web-mode-enable-current-element-highlight t))
 
-;; (use-package company-web
-;;   :commands company-web-html
-;;   :init
-;;   (add-hook 'web-mode-hook
-;;             (lambda ()
-;;               (set (make-local-variable 'company-backends)
-;;                    '(company-web-html)))))
+(use-package company-web
+  :commands company-web-html
+  :init
+  (require 'company-web-html))
 
 
 (provide 'init-web)

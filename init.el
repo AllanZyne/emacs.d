@@ -20,3 +20,4 @@
 ;; (require 'init-markdown)
 
 (require 'server)
+(server-start)

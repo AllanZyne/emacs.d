@@ -32,10 +32,11 @@
   (setq projectile-completion-system 'helm)
   (setq projectile-indexing-method 'alien)
   ;; (setq projectile-switch-project-action 'helm-projectile)
-  (setq projectile-keymap-prefix (kbd "M-p")))
+  (setq projectile-keymap-prefix (kbd "M-p"))
   :config
-  (projectile-global-mode)
-  (helm-projectile-on)
+  (projectile-mode 1)
+  (helm-projectile-on))
+
   ;; (setq projectile-enable-caching t)
   ;; :bind (("M-p p" . helm-projectile-switch-project)
   ;; 	 ("M-p f" . helm-projectile-find-file)
