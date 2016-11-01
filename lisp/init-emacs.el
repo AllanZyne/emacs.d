@@ -10,7 +10,7 @@
 
 ;; desktop
 (desktop-save-mode 1)
-(setq dektop-globals-to-save '())
+(desktop-clear)
 
 ;; font
 (use-package chinese-fonts-setup
