@@ -10,6 +10,7 @@
 
 ;; desktop
 (desktop-save-mode 1)
+(setq desktop-load-locked-desktop t)
 (desktop-clear)
 
 ;; font

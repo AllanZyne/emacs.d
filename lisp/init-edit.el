@@ -19,16 +19,16 @@
 (use-package drag-stuff
   :config (drag-stuff-global-mode 1))
 
+;; parens
 (use-package smartparens
   :config
   (require 'smartparens-config)
   (smartparens-global-mode 1)
   (show-smartparens-global-mode 1))
 
-
-(use-package rainbow-delimiters
-  :config
-  (global-rainbow-delimiters 1))
+;; (use-package rainbow-delimiters
+;;   :config
+;;   (global-rainbow-delimiters 1))
 
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
