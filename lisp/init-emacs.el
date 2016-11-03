@@ -33,7 +33,7 @@
   :config
   (form-feed-mode 1))
 
-(global-auto-revert-mode 1)
+(global-auto-revert-mode)
 
 ;; custom
 (load custom-file)

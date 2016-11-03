@@ -2,30 +2,29 @@
 (global-unset-key (kbd "M-m"))
 
 (use-package helm
-  :init
   :config
   (require 'helm-config)
   (helm-mode 1)
+
   (setq helm-grep-ag-command "pt /e /S /color /hidden /nogroup %s %s %s")
-  (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
-  (define-key helm-map (kbd "C-i") 'helm-execute-persistent-action)
-  (define-key helm-map (kbd "<esc>") 'helm-select-action)
-  ;(define-key helm-map (kbd "<backspace>") 'helm-find-files-up-one-level)
-  ;(define-key helm-map (kbd "C-j") 'helm-next-line)
-  ;(define-key helm-map (kbd "C-k") 'helm-previous-line)
-  :bind (("M-x" . helm-M-x)
-	 ("M-y" . helm-show-kill-ring)
-	 ("C-x C-f" . helm-find-files)
-	 ("C-x b" . helm-mini)
-	 ("M-m o" . helm-semantic-or-imenu)
-	 ("M-m a" . helm-do-grep-ag)
-	 ("M-m p" . helm-list-elisp-packages)
-	 ("M-m b" . helm-filtered-bookmarks)))
+
+  (bind-key "M-x" 'helm-M-x)
+  (bind-key "M-y" 'helm-show-kill-ring)
+  (bind-key "C-x C-f" 'helm-find-files)
+  (bind-key "C-x b" 'helm-mini)
+  (bind-key "M-m o" 'helm-semantic-or-imenu)
+  (bind-key "M-m a" 'helm-do-grep-ag)
+  (bind-key "M-m p" 'helm-list-elisp-packages)
+  (bind-key "M-m b" 'helm-filtered-bookmarks)
+
+  (bind-key "<tab>" 'helm-execute-persistent-action helm-map)
+  (bind-key "C-i" 'helm-execute-persistent-action helm-map)
+  (bind-key "<esc>" 'helm-select-action helm-map))
 
 (use-package helm-pt
   :commands helm-projetile-pt)
 
-(global-unset-key (kbd "M-o"))
+;; (global-unset-key (kbd "M-o"))
 
 (use-package helm-projectile
   :init
@@ -35,18 +34,8 @@
   (setq projectile-keymap-prefix (kbd "M-p"))
   :config
   (projectile-mode 1)
+  (bind-key* "M-p s" 'helm-projectile-pt)
   (helm-projectile-on))
-
-  ;; (setq projectile-enable-caching t)
-  ;; :bind (("M-p p" . helm-projectile-switch-project)
-  ;; 	 ("M-p f" . helm-projectile-find-file)
-  ;; 	 ("M-p F" . helm-projectile-find-file-in-known-projects)
-  ;; 	 ("M-p g" . helm-projectile-find-file-dwim)
-  ;; 	 ("M-p d" . helm-projectile-find-dir)
-  ;; 	 ("M-p r" . helm-projectile-recentf)
-  ;; 	 ("M-o"   . helm-projectile-find-other-file)
-  ;; 	 ("M-p b" . helm-projectile-switch-to-buffer)
-  ;; 	 ("M-p s" . helm-projectile-pt)))
 
 
 (provide 'init-helm)

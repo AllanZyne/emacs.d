@@ -15,7 +15,7 @@
 
 (require 'init-javascript)
 (require 'init-web)
-;; (require 'init-python)
+(require 'init-python)
 ;; (require 'init-cpp)
 ;; (require 'init-markdown)
 

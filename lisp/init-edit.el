@@ -34,7 +34,7 @@
 (setq-default tab-width 4)
 
 (use-package multiple-cursors
-  :bind (("C-L" . mc/edit-lines)
+  :bind (("C-S-l" . mc/edit-lines)
          ("C->" . mc/mark-next-like-this)
          ("C-<" . mc/mark-previous-like-this)
          ("C-<mouse-1>" . mc/add-cursor-on-click)))

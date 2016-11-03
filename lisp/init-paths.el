@@ -5,8 +5,9 @@
 
 ;; exec-path
 (defconst system-path (getenv "PATH"))
-(setenv "PATH" (concat system-path ";E:/babun-1.2.0/.babun/cygwin/bin"))
-(setq exec-path (append exec-path '("E:/babun-1.2.0/.babun/cygwin/bin")))
+(setenv "PATH" (concat "E:/babun-1.2.0/.babun/cygwin/bin;" system-path))
+;; (setq exec-path (append exec-path '("E:/babun-1.2.0/.babun/cygwin/bin")))
+(push "E:/babun-1.2.0/.babun/cygwin/bin" exec-path)
 
 ;; cache
 (defconst cache-directory (concat user-emacs-directory ".cache/"))
