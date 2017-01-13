@@ -3,5 +3,4 @@
   :mode "\\.js\\'"
   :interpreter "node")
 
-
 (provide 'init-javascript)

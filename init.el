@@ -13,11 +13,13 @@
 (require 'init-helm)
 (require 'init-company)
 
+(require 'init-neotree)
+
 (require 'init-javascript)
 (require 'init-web)
 (require 'init-python)
 ;; (require 'init-cpp)
-;; (require 'init-markdown)
+(require 'init-markdown)
 
 (require 'server)
 (server-start)
