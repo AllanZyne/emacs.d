@@ -6,6 +6,9 @@
 
 (package-initialize)
 
+(unless package-archive-contents
+  (package-refresh-contents))
+
 (package-install 'use-package)
 (setq use-package-always-ensure t)
 
