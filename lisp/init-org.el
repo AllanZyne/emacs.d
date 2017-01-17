@@ -5,6 +5,4 @@
 (bind-key "M-o b" 'org-iswitchb)
 
 
-
-
 (provide 'init-org)
