@@ -2,7 +2,7 @@
 ;; basic
 (setq visible-bell 1)
 (defalias 'yes-or-no-p 'y-or-n-p)
-(global-linum-mode t)
+;;(global-linum-mode t)
 
 ; (let (inhibit-message t)
 ;   (message "Listen to me!"))
@@ -62,7 +62,8 @@
 (global-auto-revert-mode)
 
 ;; custom
-(load custom-file)
+(if (file-exists-p custom-file)
+    (load custom-file))
 
 
 (provide 'init-emacs)
