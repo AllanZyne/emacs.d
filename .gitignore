@@ -1,7 +1,15 @@
-*
 
-!.gitignore
-!init.el
-!lisp/
-!lisp/init-*.el
-!right-click-menu.reg
+.cache/
+auto-save-list/
+elpa/
+chinese-fonts-setup/
+eshell/
+server/
+
+\.#*
+recentf
+*.cache
+*.eld
+
+.mc-lists.el
+lisp/init-custom.el
