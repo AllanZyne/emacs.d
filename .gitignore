@@ -1,6 +1,7 @@
 
 .cache/
 auto-save-list/
+anaconda-mode/
 elpa/
 chinese-fonts-setup/
 eshell/
