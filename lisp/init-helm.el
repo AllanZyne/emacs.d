@@ -10,9 +10,9 @@
 
   ;; (setq helm-grep-ag-command "pt /e /S /color /hidden /nogroup %s %s %s")
 
-  :bind* (("M-P" . helm-M-x)
+  :bind* (("M-x" . helm-M-x)
           ("C-V" . helm-show-kill-ring)
-          ("M-o" . helm-find-files)
+          ("C-x C-f" . helm-find-files)
           ("C-<tab>" . helm-mini)
           ("M-r" . helm-semantic-or-imenu)))
 
@@ -26,7 +26,8 @@
   :config
   (projectile-mode 1)
   (helm-projectile-on)
-  :bind* (("M-p" . helm-projectile-find-file)))
+  :bind* (("M-p" . helm-projectile-find-file)
+          ("M-P" . helm-projectile-switch-project)))
 
 
 (use-package helm-ag

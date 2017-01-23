@@ -41,11 +41,14 @@
             (setq beg (line-beginning-position) end (line-end-position)))
         (comment-or-uncomment-region beg end)))
 
-(bind-key* "C-;" 'comment-or-uncomment-region-or-line)
+(bind-key* "C-/" 'comment-or-uncomment-region-or-line)
 
 ;; move lines
 (use-package drag-stuff
-  :config (drag-stuff-global-mode 1))
+  :config
+  (drag-stuff-mode 1)
+  :bind* (("M-<up>" . drag-stuff-up)
+          ("M-<down>" . drag-stuff-down)))
 
 ;; parens
 (use-package smartparens

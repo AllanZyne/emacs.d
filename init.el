@@ -1,6 +1,6 @@
 ;(package-initialize)
 
-(setq gc-cons-threshold 100000000)
+(setq gc-cons-threshold 200000000)
 
 ; init-paths
 (load-file (concat user-emacs-directory "lisp/init-paths.el"))
@@ -20,8 +20,8 @@
 
 ;; programming languages
 (require 'init-haskell)
-;; (require 'init-javascript)
-;; (require 'init-web)
+(require 'init-javascript)
+(require 'init-web)
 (require 'init-python)
 ;; (require 'init-cpp)
 (require 'init-markdown)

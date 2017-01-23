@@ -16,9 +16,9 @@
 (use-package neotree
   :config
   (setq neo-smart-open t)
-  (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
+  ;; (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
   (setq projectile-switch-project-action 'neotree-projectile-action)
-  :bind (("<f8>" . neotree-toggle)))
+  :bind* (("M-B" . neotree-toggle)))
 
 
 (provide 'init-neotree)
