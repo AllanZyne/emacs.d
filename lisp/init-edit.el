@@ -1,11 +1,27 @@
 
-(package-install 'bind-key)
+(use-package bind-key)
 
 ;; ignore keys
 (dolist (keys '("C-<mouse-1>" "C-<down-mouse-1>" "C-z"))
   (global-set-key (kbd keys) 'ignore))
 
-(bind-key "C-a" 'back-to-indentation)
+;; http://emacsredux.com/blog/2013/05/22/smarter-navigation-to-the-beginning-of-a-line/
+(defun smarter-move-beginning-of-line (arg)
+  (interactive "^p")
+  (setq arg (or arg 1))
+
+  ;; Move lines first
+  (when (/= arg 1)
+    (let ((line-move-visual nil))
+      (forward-line (1- arg))))
+
+  (let ((orig-point (point)))
+    (back-to-indentation)
+    (when (= orig-point (point))
+      (move-beginning-of-line 1))))
+
+(global-set-key [remap move-beginning-of-line] 'smarter-move-beginning-of-line)
+
 
 (bind-key "<f1>" 'help-command)
 (bind-key "M-h" 'help-command)
@@ -53,6 +69,7 @@
          ("C-<" . mc/mark-previous-like-this)
          ("C-<mouse-1>" . mc/add-cursor-on-click)))
 
+(cua-mode t)
 
 
 (provide 'init-edit)

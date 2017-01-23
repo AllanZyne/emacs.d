@@ -4,7 +4,7 @@
 ;   (message "Listen to me!"))
 
 ;; ui
-(menu-bar-mode -1)
+;;(menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 
@@ -22,6 +22,7 @@
 ;(load-theme 'deeper-blue)
 ;(use-package spacemacs-theme)
 ;(setq spacemacs-theme-comment-bg nil)
+(package-install 'dracula-theme)
 (load-theme 'dracula t)
 
 ;; others
