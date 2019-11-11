@@ -1,8 +1,6 @@
-
 .cache/
 auto-save-list/
-anaconda-mode/
-elpa/
+elpa*/
 chinese-fonts-setup/
 eshell/
 server/
@@ -13,4 +11,3 @@ recentf
 *.eld
 
 .mc-lists.el
-lisp/init-custom.el
