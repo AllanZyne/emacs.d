@@ -49,20 +49,20 @@
 ;;------------------------------------------------------------------------------
 ;; Font
 ;;------------------------------------------------------------------------------
-(set-frame-font "Fira Code 12")
-(dolist (charset '(kana han symbol cjk-misc bopomofo))
-  (set-fontset-font (frame-parameter nil 'font)
-                    charset (font-spec :family "Noto Sans CJK SC" :size 16)))
+;; (set-frame-font "FuraCode Nerd Font 12")
+;; (dolist (charset '(kana han symbol cjk-misc bopomofo))
+;;   (set-fontset-font (frame-parameter nil 'font)
+;;                     charset (font-spec :family "Noto Sans CJK SC" :size 16)))
 
-(add-to-list 'after-make-frame-functions
-	     (lambda (new-frame)
-	       (select-frame new-frame)
-               ;; English Font
-               (set-face-attribute 'default nil :font "Fira Code 12")
-               ;; Chinese Font
-               (dolist (charset '(kana han symbol cjk-misc bopomofo))
-                 (set-fontset-font (frame-parameter nil 'font)
-                                   charset (font-spec :family "Noto Sans CJK SC" :size 16)))))
+;; (add-to-list 'after-make-frame-functions
+;; 	     (lambda (new-frame)
+;; 	       (select-frame new-frame)
+;;                ;; English Font
+;;                (set-face-attribute 'default nil :font "FuraCode Nerd Font 12")
+;;                ;; Chinese Font
+;;                (dolist (charset '(kana han symbol cjk-misc bopomofo))
+;;                  (set-fontset-font (frame-parameter nil 'font)
+;;                                    charset (font-spec :family "Noto Sans CJK SC" :size 16)))))
 
 
 (provide 'init-themes)

@@ -12,7 +12,7 @@
   (define-key coq-mode-map (kbd "M-<right>") 'proof-goto-point)
   (define-key coq-mode-map (kbd "M-p") 'coq-Print)
   (define-key coq-mode-map (kbd "M-c") 'coq-Check)
-  (define-key coq-mode-map (kbd "M-q") 'coq-query)
+  (define-key coq-mode-map (kbd "M-k") 'coq-SearchAbout)
   (define-key coq-mode-map (kbd "M-l") 'coq-LocateNotation))
 
 (require-package 'company-coq)
