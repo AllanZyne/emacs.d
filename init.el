@@ -16,7 +16,7 @@
 		            (lambda () (setq gc-cons-threshold normal-gc-cons-threshold))))
 
 ;;----------------------------------------------------------------------------
-;; Bootstrap config
+;; Bootstrap
 ;;----------------------------------------------------------------------------
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (require 'init-utils)
@@ -26,7 +26,7 @@
 (require 'init-path) ;; Set up $PATH
 
 ;;----------------------------------------------------------------------------
-;; UI config
+;; UI
 ;;----------------------------------------------------------------------------
 (require-package 'diminish)
 (maybe-require-package 'scratch)
@@ -35,20 +35,29 @@
 (require 'init-frame-hooks)
 (require 'init-xterm)
 (require 'init-themes)
+(require 'init-font)
 (require 'init-gui-frames)
+(require 'init-buffer)
+(require 'init-windows)
 ;(require 'init-neotree)
 
-;;----------------------------------------------------------------------------
-;; Editing config
-;;----------------------------------------------------------------------------
-(require 'init-company)
+;; mini buffer
+(require 'init-smex)
+(require 'init-ivy)
 
 ;;----------------------------------------------------------------------------
-;; Load configs for specific features and modes
+;; Common Editing
 ;;----------------------------------------------------------------------------
+(require 'init-company)
+(require 'init-whitespace)
 (require 'init-editing-utils)
+
+;;----------------------------------------------------------------------------
+;; Language
+;;----------------------------------------------------------------------------
 (require 'init-paredit)
 (require 'init-lisp)
+
 (require 'init-coq)
 
 ;; programming languages

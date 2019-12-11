@@ -46,23 +46,6 @@
   (after-load 'dimmer
     (advice-add 'frame-set-background-mode :after (lambda (&rest args) (dimmer-process-all)))))
 
-;;------------------------------------------------------------------------------
-;; Font
-;;------------------------------------------------------------------------------
-;; (set-frame-font "FuraCode Nerd Font 12")
-;; (dolist (charset '(kana han symbol cjk-misc bopomofo))
-;;   (set-fontset-font (frame-parameter nil 'font)
-;;                     charset (font-spec :family "Noto Sans CJK SC" :size 16)))
-
-;; (add-to-list 'after-make-frame-functions
-;; 	     (lambda (new-frame)
-;; 	       (select-frame new-frame)
-;;                ;; English Font
-;;                (set-face-attribute 'default nil :font "FuraCode Nerd Font 12")
-;;                ;; Chinese Font
-;;                (dolist (charset '(kana han symbol cjk-misc bopomofo))
-;;                  (set-fontset-font (frame-parameter nil 'font)
-;;                                    charset (font-spec :family "Noto Sans CJK SC" :size 16)))))
 
 
 (provide 'init-themes)
