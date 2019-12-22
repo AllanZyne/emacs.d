@@ -9,5 +9,7 @@ server/
 recentf
 *.cache
 *.eld
-
 .mc-lists.el
+.agignore
+.smex-items
+session.*
